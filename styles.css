@@ -1,0 +1,92 @@
+.gh-comment-copier-wrapper {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+.gh-comment-copier-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--fgColor-muted, var(--color-fg-muted, #656d76));
+  background-color: transparent;
+  border: 1px solid var(--borderColor-default, var(--color-border-default, #d0d7de));
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  vertical-align: middle;
+}
+
+.gh-comment-copier-btn:hover {
+  color: var(--fgColor-default, var(--color-fg-default, #1f2328));
+  background-color: var(--bgColor-muted, var(--color-canvas-subtle, #f6f8fa));
+  border-color: var(--borderColor-default, var(--color-border-default, #d0d7de));
+}
+
+.gh-comment-copier-btn:active {
+  background-color: var(--bgColor-emphasis, var(--color-canvas-inset, #eaeef2));
+}
+
+.gh-comment-copier-btn--success {
+  color: var(--fgColor-success, var(--color-success-fg, #1a7f37));
+  border-color: var(--borderColor-success-emphasis, var(--color-success-emphasis, #1a7f37));
+  background-color: var(--bgColor-success-muted, var(--color-success-subtle, #dafbe1));
+}
+
+.gh-comment-copier-btn--success:hover {
+  color: var(--fgColor-success, var(--color-success-fg, #1a7f37));
+  background-color: var(--bgColor-success-muted, var(--color-success-subtle, #dafbe1));
+}
+
+.gh-comment-copier-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .gh-comment-copier-btn {
+    color: #8b949e;
+    border-color: #30363d;
+  }
+
+  .gh-comment-copier-btn:hover {
+    color: #c9d1d9;
+    background-color: #21262d;
+    border-color: #30363d;
+  }
+
+  .gh-comment-copier-btn:active {
+    background-color: #161b22;
+  }
+
+  .gh-comment-copier-btn--success {
+    color: #3fb950;
+    border-color: #238636;
+    background-color: rgba(46, 160, 67, 0.15);
+  }
+}
+
+/* Handle GitHub's dark theme classes */
+[data-color-mode="dark"] .gh-comment-copier-btn,
+[data-dark-theme] .gh-comment-copier-btn {
+  color: #8b949e;
+  border-color: #30363d;
+}
+
+[data-color-mode="dark"] .gh-comment-copier-btn:hover,
+[data-dark-theme] .gh-comment-copier-btn:hover {
+  color: #c9d1d9;
+  background-color: #21262d;
+}
+
+[data-color-mode="dark"] .gh-comment-copier-btn--success,
+[data-dark-theme] .gh-comment-copier-btn--success {
+  color: #3fb950;
+  border-color: #238636;
+  background-color: rgba(46, 160, 67, 0.15);
+}
